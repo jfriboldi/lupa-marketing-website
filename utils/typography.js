@@ -1,5 +1,5 @@
 export const primaryFont = "'Poppins', sans-serif";
-export const titleFont = "'Roboto Slab', serif";
+export const titleFont = "'Source Sans Pro', sans-serif";
 
 export const typeScale = {
   header1: "3.052rem",

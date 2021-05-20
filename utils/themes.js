@@ -1,20 +1,21 @@
-import { pink, blue, brown, neutral, yellow, green, red } from "./colors";
+import { pink, blue, neutral, yellow, green, red } from "./colors";
 import { primaryFont, titleFont } from "./typography";
 
 export const defaultTheme = {
   primaryColor: pink[500],
-  secondaryColor: brown[500],
-  primaryHoverColor: brown[300],
-  secondaryHoverColor: pink[100],
-  primaryActiveColor: brown[200],
+  secondaryColor: blue[500],
+  primaryHoverColor: pink[300],
+  secondaryHoverColor: blue[300],
+  primaryActiveColor: pink[200],
   secondaryActiveColor: blue[100],
   textColorOnPrimary: neutral[100],
   textColor: neutral[600],
   textColorInverted: neutral[100],
   disabled: neutral[400],
   textOnDisabled: neutral[300],
-  formElementBackground: neutral[200],
+  formElementBackground: neutral[100],
   textOnFormElementBackground: neutral[600],
+  backgroundColor: neutral[100],
   primaryFont,
   titleFont,
   status: {

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { TopBarLink, InsideLink } from "./NavLinks";
 import Logo from './Logo';
 import styled from 'styled-components';
+import Translation from './Translation'
 
 type Props = {
   active?: boolean;
@@ -16,7 +17,7 @@ const Pane = styled.div`
   padding: 0;
   border-bottom: 1 px solid gray;
   height: 120px;
-  background: ${props => props.theme.primaryColor};
+  background: ${props => props.theme.backgroundColor};
   position: fixed;
   top: 0;
   z-index: 10;
@@ -91,7 +92,8 @@ const Navigation: FC<{ links?: { name: string; link: string }[] }> = ({ links })
                 </TopBarLink>
                 ))
                 : null}
-            </ListCont>
+              </ListCont>
+              <Translation />
           </Panel>
         </Container>
       </Pane>

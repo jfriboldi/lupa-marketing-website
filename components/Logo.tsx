@@ -1,27 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
-import LupaLogo from '../assets/lupa_logo.svg'
+import LupaLogo from '../assets/logo_b.svg'
+import LogoInv from '../assets/logo_w.svg'
 import styled from 'styled-components'
 
 
 const LogoCont = styled.div`
-  height: 80px;
+  width: 100%;
+  height: 90%;
   max-width: 150px;
-  margin: 0 auto;
+  
 `
 
-const LogoFooter = styled(LupaLogo)`
-  path{
-    fill: #fff;
-  }
-`
 
 export const LogoWhite = () => {
   return (
     <Link href="/">
       <a>
         <LogoCont>
-          <LogoFooter height={80}/>
+          <LogoInv height={80}/>
         </LogoCont>
       </a>
     </Link>
@@ -30,13 +27,13 @@ export const LogoWhite = () => {
 
 const Logo = () => {
   return (
-    <Link href="/">
-      <a>
-        <LogoCont>
-          <LupaLogo width={200}/>
-        </LogoCont>
-      </a>
-    </Link>
+    <LogoCont>
+      <Link href="/">
+        <a>
+          <LupaLogo />
+        </a>
+      </Link>
+    </LogoCont>
   )
 }
 

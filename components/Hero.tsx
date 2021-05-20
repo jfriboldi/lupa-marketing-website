@@ -1,5 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import {useTranslations} from 'next-intl';
 
 const Pane = styled.div`
   width: 100%;
@@ -18,9 +19,7 @@ const Heading = styled.h1`
   line-height: clamp(1rem, 4vw, 3rem);
   margin-bottom: 1rem;
   color: ${props => props.theme.secondaryColor};
-  &:first-letter {
-    color: ${props => props.theme.primaryColor};
-  } 
+  font-family: ${props => props.theme.titleFont}
 `;
 
 const Paragraph = styled.p`
@@ -29,15 +28,16 @@ const Paragraph = styled.p`
   color: #4f5c6e;
 `
 
-const Hero: FC<{ content: { title1: string; body: string } }> = ({ content }) => {
+const Hero = () => {
+  const t = useTranslations('Hero');
   return (
     <Pane>
       <div>
         <Heading >
-          {content.title}
+          {t('title')}
         </Heading>
         <Paragraph>
-          {content.body}
+          {t('body')}
         </Paragraph>
       </div>
     </Pane>
@@ -47,7 +47,9 @@ const Hero: FC<{ content: { title1: string; body: string } }> = ({ content }) =>
 Hero.defaultProps = {
   content: {
       title: 'O pinto pia enquanto a pia pinga',
-      body: 'Formação e Atendimento na Abordagem Sistêmica Fenomenológica',
+      body: 'Nunca diga nunca',
     }
 }
+
+
 export default Hero

@@ -1,0 +1,22 @@
+{
+  "Hero": {
+      "title": "Hey ho, Let's go!",
+      "body": "Now you see me, now you don't"
+    },
+  "FeaturesWeb":
+      {
+        "title": "Web Design",
+        "body":
+          "Make technology work for you and not you for the technology",
+        "link": "/web-dev",
+        "image": "/images/600x300.png",
+        "btn": "Learn More"
+
+        
+      },
+    "FeaturesBranding": 
+      { "title": "Branding", "body": "Helping your company grow", "link": "/branding", "image": "/images/600x300.png" },
+    "FeaturesSocial":
+    { "title": "Social Media", "body": "Your gate to your customers", "link": "/social-media", "image": "/images/600x300.png" }
+    
+}

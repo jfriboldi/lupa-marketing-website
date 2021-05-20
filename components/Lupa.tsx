@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LupaLogo from '../assets/lupa_logo.svg'
+import LupaLogo from '../assets/logo_w.svg'
 
 const DevBy = styled.div`
   display: flex;

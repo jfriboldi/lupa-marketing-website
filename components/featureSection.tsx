@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { PrimaryButton } from "./Buttons"
 import styled from 'styled-components'
 import { typeScale, primaryFont } from "../utils"
+import {useTranslations} from 'next-intl';
 
 interface Props{
   invert: boolean
@@ -74,28 +75,22 @@ const LeftDiv = styled.div<{ invert: boolean}>`
 
   `
 
-const FeatureSection: FC<{ invert?: boolean; title: string; body: string; image: string; link: string; }> = ({
-  title,
-  body,
-  image,
-  invert,
-  link,
-  }) => {
-  
+const FeatureSection: FC<{ invert?: boolean; }> = ({ invert }) => {
+  const t = useTranslations('FeaturesWeb');
   const Left = () => (
     <LeftDiv invert={invert}>
-      <Heading invert={invert}>{title}</Heading>
-      <Paragraph invert={invert}>{body}</Paragraph>
-      <Link href={link}>
+      <Heading invert={invert}>{t('title')}</Heading>
+      <Paragraph invert={invert}>{t('body')}</Paragraph>
+      <Link href={String(t('link'))}>
         <PrimaryButton>
-          Saiba Mais
+          {t('btn')}
         </PrimaryButton>
       </Link>
     </LeftDiv>
   )
   const Right = () => (
     <RightDiv>
-      <Image src={image} layout="intrinsic" width={1368} height={912} quality={100} loading="lazy" />
+      <Image src={String(t('image'))} layout="intrinsic" width={1368} height={912} quality={100} loading="lazy" />
     </RightDiv>
   )
 

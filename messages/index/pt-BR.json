@@ -1,0 +1,21 @@
+{
+  "Hero": {
+      "title": "O pinto pia enquanto a pia pinga",
+      "body": "Na minha casa tem goteira"
+    },
+  "FeaturesWeb": 
+      {
+        "title": "Nhac",
+        "body":
+          "Testando",
+        "link": "/web-dev",
+        "image": "/images/600x300.png",
+        "btn": "Saiba Mais"
+        
+      },
+    "FeaturesBranding":
+      { "title": "Marcando", "body": "Golaço", "link": "/branding", "image": "/images/600x300.png" },
+    "FeaturesSocial":
+      { "title": "Social Media", "body": "Faicebuq", "link": "/social-media","image": "/images/600x300.png" }
+    
+}
