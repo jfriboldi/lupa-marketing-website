@@ -6,7 +6,7 @@ import { useState } from "react";
 import { TopBarLink, InsideLink } from "./NavLinks";
 import Logo from './Logo';
 import styled from 'styled-components';
-import Translation from './Translation'
+
 
 type Props = {
   active?: boolean;
@@ -93,7 +93,6 @@ const Navigation: FC<{ links?: { name: string; link: string }[] }> = ({ links })
                 ))
                 : null}
               </ListCont>
-              <Translation />
           </Panel>
         </Container>
       </Pane>
@@ -103,10 +102,11 @@ const Navigation: FC<{ links?: { name: string; link: string }[] }> = ({ links })
 }
 
 Navigation.defaultProps = {
-  links: [{ name: 'Atendimento', link: '/atendimento' },
-          { name: 'Formações', link: '/formacao' },
-          { name: 'Editora', link: '/editora' },
-          { name: 'Quem Somos', link: '/quem-somos' }],
+  links: [{ name: 'Services', link: '/services' },
+          { name: 'Projects', link: '/projects' },
+          { name: 'Articles', link: '/articles' },
+          { name: 'Who are Lupa?', link: '/about-us' },
+          { name: 'Contact', link: '/contact' }],
 }
 
 
