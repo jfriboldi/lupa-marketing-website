@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, defaultTheme, darkTheme } from "../utils";
+import { GlobalStyle, defaultTheme } from "../utils";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero"
 import FeatureSection from "../components/featureSection"
@@ -15,7 +15,7 @@ const Home = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(false);
   
   return (
-    <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
+    <ThemeProvider theme={useDarkTheme ? '' : defaultTheme}>
       <Layout>
         <Hero />
         <FeatureSection />

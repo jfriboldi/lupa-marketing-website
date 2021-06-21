@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Copyright from "./Copyright";
-import { LogoWhite } from "./Logo"
 import Lupa from "./Lupa";
 import styled from "styled-components"
 import { FooterLink, FooterInsLink } from "./NavLinks"
@@ -70,7 +69,7 @@ export default function Foot() {
   return (
     <Sector>
       <LogoSec>
-        <LogoWhite />  
+        
       </LogoSec>
     <Container>
         

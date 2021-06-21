@@ -17,7 +17,7 @@ const Pane = styled.div`
   padding: 0;
   border-bottom: 1 px solid gray;
   height: 120px;
-  background: ${props => props.theme.backgroundColor};
+  background: ${props => props.theme.lupaBlue};
   position: fixed;
   top: 0;
   z-index: 10;
@@ -28,7 +28,7 @@ const Pane = styled.div`
 
 const Container = styled.div`
   height: 100%;
-  max-width: 1300px;
+  max-width: 1900px;
   margin: 0 auto;
   
 `;

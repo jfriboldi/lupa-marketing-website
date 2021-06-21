@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LupaLogo from '../assets/logo_w.svg'
+
 
 const DevBy = styled.div`
   display: flex;
@@ -17,9 +17,7 @@ const ExtLink = styled.a`
 const LinkText = styled.span`
   margin-right: 1em;
 `
-const LogoLupa = styled(LupaLogo)`
-  max-width: 100px;
-`
+
 
 
 export default function Lupa() {
@@ -28,7 +26,7 @@ export default function Lupa() {
       <DevBy>
         <ExtLink href="https://www.lupamarketing.ca">
           <LinkText>Desenvolvido por</LinkText>
-        <LogoLupa width={100}/>
+        
         </ExtLink>
       </DevBy>
      
