@@ -47,14 +47,14 @@ const ListCont = styled.ul<Props>`
   flex-direction: ${props => props.active ? 'column' : 'row'};
   top: ${props => props.active ? '120px' : 'unset'};
   left: ${props => props.active ? '0' : 'unset'};
-  background-color: #fff;
+  background-color: ${props => props.theme.lupaBlue};
   list-style-type: none;
   margin: 0;
   padding: ${props => props.active ? '8em 0' : '0'};
   justify-content: space-around;
   align-items: center;
   height: calc(100% - 120px);
-  width: ${props => props.active ? '100%' : 'clamp(60%, 800px, 80%)'};
+  width: ${props => props.active ? '100%' : 'clamp(30%, 800px, 40%)'};
   
   
 
@@ -102,11 +102,12 @@ const Navigation: FC<{ links?: { name: string; link: string }[] }> = ({ links })
 }
 
 Navigation.defaultProps = {
-  links: [{ name: 'Services', link: '/services' },
-          { name: 'Projects', link: '/projects' },
-          { name: 'Articles', link: '/articles' },
-          { name: 'Who are Lupa?', link: '/about-us' },
-          { name: 'Contact', link: '/contact' }],
+  links: [{ name: 'Home', link: '/' },
+          { name: 'Services', link: '/services' },
+          { name: 'Contact', link: '/contact' },
+    { name: 'Blog', link: '/blog' },
+]
+          
 }
 
 

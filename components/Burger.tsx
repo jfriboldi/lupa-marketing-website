@@ -1,3 +1,5 @@
+import { defaultTheme } from "../utils";
+
 type Props = {
   active: boolean;
   onClick: () => void;
@@ -24,7 +26,7 @@ export default function Burger({ active, onClick }: Props) {
             position: absolute;
             width: 28px;
             height: 2px;
-            background: #ba8154;
+            background: ${defaultTheme.lupaBeige};
             top: calc(50% - 2px / 2);
             left: calc(50% - 28px / 2);
             transition: all 150ms ease-in;
@@ -48,7 +50,7 @@ export default function Burger({ active, onClick }: Props) {
             transform: rotate(-45deg);
           }
           .active .meat {
-            background: #ba8154;
+            background: ${defaultTheme.lupaBeige};
           }
 
           @media (min-width: 769px) {

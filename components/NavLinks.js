@@ -45,36 +45,36 @@ export const FooterInsLink = styled.a`
 
 export const InsideLink = styled.a`
   font-size: ${typeScale.header4};
+  color: white;
+  font-weight: 300;
   text-align: center;
   margin: 0 auto;
   padding: 0;
   transition: all 0.2s ease-in-out;
   position: relative;
   cursor: pointer;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    width: 0px;
-    height: 5px;
-    margin: 5px 0 0;
-    transition: all 0.2s ease-in-out;
-    transition-duration: 0.5s;
-    opacity: 0;
-    background-color: ${(props) => props.theme.primaryHoverColor};
-  }
   &:before {
-    left: 50%;
+    content: "[";
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    font-weight: 400;
+    color: black;
+    font-size: ${typeScale.header3};
+    opacity: ${props => props.active ? 1 : 0};
   }
   &:after {
-    right: 50%;
+    content: "]";
+    position: relative;
+    right: -10px;
+    color: black;
+    font-weight: 800;
+    font-size: ${typeScale.header3};
+    top: 5px;
+    opacity: ${props => props.active ? 1 : 0};
   }
   &:hover {
-    &:before,
-    &:after {
-      width: 50%;
-      opacity: 1;
-    }
+    color: ${props => props.theme.lupaRed};
+    
   }
 `;
